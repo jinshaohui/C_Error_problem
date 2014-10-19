@@ -97,7 +97,7 @@ int main()
     memcpy(buf + 2,buf,5);
     memmove(buf1+2,buf1,5);
     mymemcpy1(buf2 + 2,buf2,5);
-    mymemcpy2(buf4 + 2,buf3,5);
+    mymemcpy2(buf3 + 2,buf3,5);
    
     printf(" end of memcpy(buf +2,buf,5), buf is :%s\n",buf);
     printf(" end of memmove(buf1 +2,buf1,5), buf1 is :%s\n",buf1);
