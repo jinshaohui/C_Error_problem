@@ -1,0 +1,39 @@
+/*File : union.c
+ *Auth : sjin
+ *Date : 20141022
+ *Mail : 413977243@qq.com
+ */
+
+/*介绍一些声明，及const、typedef的用法
+ */
+#include <stdio.h>
+typedef void(*ptr_to_func)(int);
+/*它表示ptr_to_func是一个函数指针，该函数
+ *接受一个int参数，返回值为void
+ */
+ptr_to_func signal(int,ptr_to_func);
+/*它表示signal是一个函数，它接收两个参数
+ * 其中一个是int型，另一个是ptr_to_func，
+ *返回值是ptr_to_func型
+ */
+
+int main()
+{
+    char (*j)[20];//j是一个指向数组的指针，数组内有20个char型的元素
+    j = (char (*)[20])malloc(20*sizeof(char));//申请空间
+
+    int const a;//a是一个常整型
+    int const *a;//a是一个指向常整型的指针
+    const int *a;//a是一个指向常整型的指针
+    int *const a;//a是一个指向整型的常指针
+    const int *const a;//a是一个指向常整型的常指针
+
+    char *const *(*next)();
+    /*next 是一个指针，它指向一个函数，该函数的返回值是另一个指针
+     * 该 指针指向一个类型为char的常指针
+     */
+
+    return 0;
+}
+
+
